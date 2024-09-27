@@ -18,3 +18,4 @@ compile_commands.json
 result.txt
 vid_temp/
 !vid_temp/PUT_VID_HERE
+temp/
