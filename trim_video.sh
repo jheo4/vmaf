@@ -5,4 +5,6 @@ if [ -z "$1" ] || [ -z "$2" ]; then
   exit 1
 fi
 
-ffmpeg -i shorter_video.mp4 -vf "tpad=stop_mode=clone:stop_frame=$2" $1
+output_file="${1%.*}_trimmed.mp4"
+
+ffmpeg -i $1 -vf "select=lte(n\,$2-1)" -vsync vfr $output_file
