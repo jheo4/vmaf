@@ -1,1 +1,1 @@
-docker build -t vmaf .
+docker pull gfdavila/easyvmaf
