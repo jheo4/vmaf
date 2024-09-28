@@ -19,3 +19,4 @@ result.txt
 vid_temp/
 !vid_temp/PUT_VID_HERE
 temp/
+pred_vmaf/trained_models/
