@@ -21,3 +21,6 @@ vid_temp/
 temp/
 pred_vmaf/trained_models/
 *.ods
+output.csv
+output_cam.csv
+cv_models.pdf

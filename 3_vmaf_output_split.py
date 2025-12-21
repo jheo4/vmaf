@@ -29,7 +29,6 @@ def generate_train_test_sets(input_file, target_cam_list):
             writer_test = csv.DictWriter(f_test, fieldnames=new_fieldnames)
             writer_train = csv.DictWriter(f_train, fieldnames=new_fieldnames)
 
-            # 헤더 쓰기
             writer_test.writeheader()
             writer_train.writeheader()
 
@@ -58,3 +57,4 @@ input_csv = 'output_cam.csv'
 cam_list = [1, 2, 3, 4, 5]
 
 generate_train_test_sets(input_csv, cam_list)
+

@@ -83,6 +83,15 @@ for model_name in model_lists:
 
 for model_key in pretrained_models.keys():
     model = pretrained_models[model_key]
+    print(testing_features.values[0])
+
+    # dummy testing
+    # _codec = [True]
+    # _rq = [False, False, False, True]
+    # _qp = [False, False, False, False, False, True, False, False, False, False]
+    # _features = np.array([_codec + _rq + _qp])
+    # y_pred = model_predict(model, _features)
+
     y_pred = model_predict(model, testing_features.values)
     err = (abs(y_pred - testing_vmaf.values)).mean()
     dev = (abs(y_pred - testing_vmaf.values)).std()

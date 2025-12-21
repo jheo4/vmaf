@@ -133,7 +133,7 @@ model_dict['ada_reg']    = joblib.load('./trained_models/ada_reg.pkl')
 model_dict['bag_reg']    = joblib.load('./trained_models/bag_reg.pkl')
 
 # save csv
-with open('model_result.csv', 'w') as f:
+with open('model_result_test.csv', 'w') as f:
     f.write("model_key, codec, rq, qp, vmaf\n")
     for model_key in model_dict:
         for case in cases:
@@ -141,5 +141,4 @@ with open('model_result.csv', 'w') as f:
             y_pred = model.predict([case])
             print(f"{model_key}, {case_to_string(case)}, frame_quality: {y_pred}")
             f.write(f"{model_key}, {case_to_string(case)}, {y_pred[0]}\n")
-
 

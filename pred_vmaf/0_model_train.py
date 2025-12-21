@@ -70,7 +70,7 @@ def save_prediction_error_by_cq(ref, pred, cq_wnd=5):
         # print(cq_idx, end=', ')
         None
 
-training_data = pd.read_csv("./full_vmaf.csv", header=0, index_col=False)
+training_data = pd.read_csv("./testing_data.csv", header=0, index_col=False)
 # testing_data = pd.read_csv("./metrics_testing.csv", header=0, index_col=False)
 # data = data[['rendering_quality', 'compression_quality', 'dss', 'fsim', 'haarpsi', 'mdsi', 'ms_ssim', 'vif', 'vsi', 'sr_sim']]
 
